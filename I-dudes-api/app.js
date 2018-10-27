@@ -6,7 +6,9 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-
+var redisStore = require('./config/redis');
+var mongoStore = require('./config/mongo');
+var mongoSchema = require('./schema/user');
 var app = express();
 
 // view engine setup

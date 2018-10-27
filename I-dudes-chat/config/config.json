@@ -1,0 +1,25 @@
+{
+	"db": {
+		"host": "127.0.0.1",
+		"port": "27017",
+		"name": "my_database"
+	},
+	"sessionSecret": "<RandomString>",
+	"facebook": {
+		"clientID": "1657782417677337",
+		"clientSecret": "8fdf9cb85d8f3132666ba3f0ad43bf9c",
+		"callbackURL": "/auth/facebook/callback",
+		"profileFields": ["id", "displayName", "photos"]
+	},
+	"twitter": {
+		"consumerKey": "<ConsumerKey>",
+		"consumerSecret": "<ConsumerSecret>",
+		"callbackURL": "/auth/twitter/callback",
+		"profileFields": ["id", "displayName", "photos"]
+	},
+	"redis": {
+		"host": "127.0.0.1",
+		"port": 6379,
+		"password": ""
+	}
+}

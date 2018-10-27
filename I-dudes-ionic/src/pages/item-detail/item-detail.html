@@ -1,0 +1,33 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{ roomDetail?roomDetail.name:null }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content sty>
+  <div style="height:20%">
+    <ion-item>
+      <ion-input type="text" [(ngModel)]="planname"></ion-input>
+      <button ion-button clear (click)="createNewItem()" color="dark" type="button" item-end>
+        <ion-icon name="eye"> </ion-icon>
+      </button>
+    </ion-item>
+    <ion-list style="height:80%;overflow:auto">
+      {{imgUrl}}
+      <button ion-item *ngFor="let plan of planList" (click)="getImage(plan)">{{plan.name}}</button>
+      <img [src]="base64Image" width = "200" height="200" *ngIf="base64Image"  (click)="uploadFile()">
+    </ion-list>
+  </div>
+  <div style="height:60%">good</div>
+</ion-content>
+<ion-footer>
+  <ion-item>
+    <ion-textarea type="text" style="height:15px;" [(ngModel)]="newMessage"></ion-textarea>
+    <button ion-button clear color="dark" type="button" item-end (click)="sendNewMessage(newMessage)">
+      <ion-icon name="eye"> </ion-icon>
+    </button>
+  </ion-item>
+</ion-footer>
